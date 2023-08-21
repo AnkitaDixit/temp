@@ -3,7 +3,7 @@ interface Input {
 }
 export const getLocalitySuggestions = async (inputData: Input): Promise<Input> => {
     try {
-      const response = await fetch('http://localhost:3001/searchLocality', {
+      const response = await fetch('http://3.108.190.189:3001/searchLocality', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export const getLocalitySuggestions = async (inputData: Input): Promise<Input> =
 
   export const getLodgingSuggestions = async (inputData: Input): Promise<Input> => {
     try {
-      const response = await fetch('http://localhost:3001/searchLodging', {
+      const response = await fetch('http://3.108.190.189:3001/searchLodging', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const getLocalitySuggestions = async (inputData: Input): Promise<Input> =
 
   export const getDetails = async (params: any): Promise<Input> => {
     try {
-      const response = await fetch('http://localhost:3001/placeDetails'+  params);
+      const response = await fetch('http://3.108.190.189:3001/placeDetails'+  params);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
